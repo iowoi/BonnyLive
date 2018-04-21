@@ -1,0 +1,47 @@
+.act-img {
+  width: 110px;
+  height: 85px;
+  object-fit: fill;
+  background: #ccc;
+  position: relative;
+  float: left;
+  margin: 10px 20px 0 0;
+}
+.type {
+  height: 20px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-size: 10px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+}
+.act-info {
+  width: calc(100% - 130px);
+  float: left;
+  text-align: left;
+}
+.act-info p {
+  margin: 0 0 5px;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+small {
+  display: block;
+}
+label {
+  font-size: 10px;
+  color: #666;
+  font-weight: 300;
+  display: block;
+  float: right;
+  width: 45px;
+  text-align: center;
+  padding: 3px 4px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 5px 2px 0;
+}
