@@ -1,5 +1,6 @@
 import React from "react";
-import { DatePicker, Select } from "../../../component/Common";
+import { DatePicker, Select, InputButton } from "../../../component/Common";
+import "./index.css";
 
 const options = [
   {
@@ -18,11 +19,14 @@ for (let i = 1; i <= 30; i++) {
 }
 export default () => {
   return (
-    <div>
-      日期: <DatePicker /> - <DatePicker />
-      <Select options={options} />
+    <div className="search-bar">
+      <div className="date">
+        日期: <DatePicker /> - <DatePicker />
+        <Select options={options} />
+      </div>
       <img src="./assets/icons/location.png" alt="" />
       台北 - 大安
+      <InputButton />
       <input placeholder="團名/課程" />
       <a href="">進階搜尋</a>
     </div>

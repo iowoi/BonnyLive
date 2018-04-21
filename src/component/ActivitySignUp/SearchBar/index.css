@@ -1,0 +1,14 @@
+.search-bar {
+  background: #a5a5a5;
+  color: #fff;
+  font-size: 12px;
+}
+.date > div {
+  display: inline-block;
+}
+.date input {
+  width: 90px;
+}
+.date select {
+  margin-left: 5px;
+}

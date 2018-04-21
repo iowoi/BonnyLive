@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-import DatePicker from "react-datepicker";
-import moment from "moment";
-import "react-datepicker/dist/react-datepicker.css";
 
 class SelectComponent extends Component {
   render() {
     const { name, label, options } = this.props;
     return (
-      <div className="input">
-        <label htmlFor={name}>{label}</label>
+      <div className="select">
+        {label && <label htmlFor={name}>{label}</label>}
         <select name={name}>
           {options.map((opt, index) => (
             <option

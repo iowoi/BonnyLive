@@ -8,6 +8,7 @@ import {
   Switch
 } from "react-router-dom";
 import ActivitySignUp from "./component/ActivitySignUp";
+import "./main.css";
 
 const styles = {
   width: "320px"
@@ -15,11 +16,13 @@ const styles = {
 
 const App = () => (
   <div>
-    <Router style={styles}>
-      <Switch>
-        <Route path="/" component={ActivitySignUp} />
-      </Switch>
-    </Router>
+    <div style={styles}>
+      <Router>
+        <Switch>
+          <Route path="/" component={ActivitySignUp} />
+        </Switch>
+      </Router>
+    </div>
   </div>
 );
 
