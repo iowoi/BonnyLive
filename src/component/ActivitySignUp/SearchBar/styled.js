@@ -11,6 +11,8 @@ export const Wrapper = styled.div `
         color: #fff;
         width: 50px;
         padding: 0;
+        background: none;
+        border: none;
     }
 
     .date>div {
