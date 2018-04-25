@@ -43,7 +43,7 @@ export const Wrapper = styled.header`
 
 export const SideNav = styled.div`
     height: 100%;
-    width: ${props => (props.toggleMenu ? "350px" : 0)};
+    width: ${props => (props.menuOpen ? "350px" : 0)};
     position: absolute;
     z-index: 1;
     left: 0;
@@ -52,7 +52,7 @@ export const SideNav = styled.div`
     padding-top: 60px;
     transition: 0.5s;
     @media (max-width: 480px) {
-        width: ${props => (props.toggleMenu ? "100%" : 0)};
+        width: ${props => (props.menuOpen ? "100%" : 0)};
     }
     a {
         text-decoration: none;

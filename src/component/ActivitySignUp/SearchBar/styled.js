@@ -15,24 +15,33 @@ export const Wrapper = styled.div `
 
     .date>div {
         display: inline-block;
+        width: 36.5%;
     }
 
-    .date input {
-        width: 85px;
-        height: 30px;
-    }
-
-    .date select {
-        margin-left: 5px;
-        height: 30px;
+    .date {
+        input {
+            width: 91%;
+            height: 30px;
+        }
+        .select {
+            width: 15%;
+            select {
+                margin-left: 5px;
+                height: 32px;
+                width: 100%;
+                position: relative;
+                top: -2px;
+            }
+        }
     }
 
     .input-button {
         margin: 0 7px;
+        width: calc(100% - 150px);
     }
 
     .input-button input {
-        width: 100px;
+        width: calc(100% - 70px);
         height: 30px;
     }
 

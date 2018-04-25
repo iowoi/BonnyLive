@@ -20,9 +20,9 @@ export default () => {
                 <p>新北 - 中和國防管理學院</p>
                 <small>2018/5/2 14:00 - 16:00</small>
                 <small>150/每人 | 尚缺 4 人 | 4/25報名截止</small>
-                <Button id="id" width="100" type="submit" onClick={onClick}>
+                {/* <Button id="id" width="100" type="submit" onClick={onClick}>
                     Button
-                </Button>
+                </Button> */}
             </div>
         </Wrapper>
     );

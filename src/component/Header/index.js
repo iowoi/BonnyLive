@@ -6,21 +6,18 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggleMenu: false
+            menuOpen: false
         };
     }
     openSideMenu = () => {
-        this.setState({ toggleMenu: true });
+        this.setState({ menuOpen: true });
     };
     closeSideMenu = () => {
-        this.setState({ toggleMenu: false });
-    };
-    componentWillReceiveProps(nextProps){
-        this.setState({ toggleMenu: !this.state.toggleMenu });
+        this.setState({ menuOpen: false });
     }
     render() {
-        const { toggleMenu } = this.state;
-        
+        const { menuOpen } = this.state;
+
         return (
             <Wrapper>
                 <nav className="navbar">
@@ -28,13 +25,13 @@ class Header extends Component {
                         <a
                             href="#"
                             onClick={
-                                !toggleMenu
+                                !menuOpen
                                     ? this.openSideMenu
                                     : this.closeSideMenu
                             }
                         >
                             <HamburgerIcon
-                                className={!toggleMenu ? "" : "active"}
+                                className={!menuOpen ? "" : "active"}
                             >
                                 <span className="line line-1" />
                                 <span className="line line-2" />
@@ -47,32 +44,32 @@ class Header extends Component {
                     </Link>
                     <a className="more">更多運動 +</a>
                 </nav>
-                <SideNav toggleMenu={toggleMenu}>
-                    <Link to="/activitySignUp">
+                <SideNav menuOpen={menuOpen}>
+                    <Link to="/activitySignUp" onClick={this.closeSideMenu}>
                         <img src="./assets/icons/SignUpMenu.png" alt="" />
                         臨打報名
                     </Link>
-                    <Link to="/newGroup">
+                    <Link to="/newGroup" onClick={this.closeSideMenu}>
                         <img src="./assets/icons/GroupMenu.png" alt="" />
                         開團找我
                     </Link>
-                    <Link to="/newGroup">
+                    <Link to="/newGroup" onClick={this.closeSideMenu}>
                         <img src="./assets/icons/KnowHowMenu.png" alt="" />
                         羽球知識家
                     </Link>
-                    <Link to="/activitySignUp">
+                    <Link to="/activitySignUp" onClick={this.closeSideMenu}>
                         <img src="./assets/icons/HotLiveMenu.png" alt="" />
                         Live 直播
                     </Link>
-                    <Link to="/activitySignUp">
+                    <Link to="/activitySignUp" onClick={this.closeSideMenu}>
                         <img src="./assets/icons/outfitMenu.png" alt="" />
                         配備推薦
                     </Link>
-                    <Link to="/activitySignUp">
+                    <Link to="/activitySignUp" onClick={this.closeSideMenu}>
                         <img src="./assets/icons/MyBonnyMenu.png" alt="" />
                         My Bonny
                     </Link>
-                    <Link to="/activitySignUp">
+                    <Link to="/activitySignUp" onClick={this.closeSideMenu}>
                         <img src="./assets/icons/LogoutMenu.png" alt="" />
                         會員登出
                     </Link>
