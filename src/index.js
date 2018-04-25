@@ -1,29 +1,16 @@
-import React from "react";
-import { render } from "react-dom";
-import {
-  BrowserRouter as Router,
-  Route,
-  hashHistory,
-  IndexRoute,
-  Switch
-} from "react-router-dom";
-import ActivitySignUp from "./component/ActivitySignUp";
+
+
+import React, {Component} from "react";
+import {render} from "react-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./component/Home";
 import "./main.css";
 
-const styles = {
-  width: "320px"
-};
+const App = () => <Router>
+    <Switch>
+        <Route path="/" component={Home} />
+    </Switch>
+</Router>
 
-const App = () => (
-  <div>
-    <div style={styles}>
-      <Router>
-        <Switch>
-          <Route path="/" component={ActivitySignUp} />
-        </Switch>
-      </Router>
-    </div>
-  </div>
-);
-
-render(<App />, document.getElementById("root"));
+render(
+    <App/>, document.getElementById("root"));

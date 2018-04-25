@@ -6,13 +6,12 @@ class SelectComponent extends Component {
     return (
       <div className="select">
         {label && <label htmlFor={name}>{label}</label>}
-        <select name={name}>
+        <select name={name} defaultValue="">
           {options.map((opt, index) => (
             <option
               value={opt.value}
               key={index}
               disabled={opt.disabled}
-              selected={opt.selected}
             >
               {opt.text || opt.value}
             </option>
