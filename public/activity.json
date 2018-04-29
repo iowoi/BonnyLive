@@ -1,0 +1,299 @@
+{
+    "total": 6,
+    "data": [
+        {
+            "tag": [
+                {
+                    "createdAt": 1523169675961,
+                    "updatedAt": 1523169675961,
+                    "id": 1,
+                    "name": "飲水機"
+                },
+                {
+                    "createdAt": 1523169704979,
+                    "updatedAt": 1523169704979,
+                    "id": 3,
+                    "name": "冷氣"
+                }
+            ],
+            "createdAt": 1523514442166,
+            "updatedAt": 1523514442166,
+            "id": 3,
+            "group_name": "開團002",
+            "people": 10,
+            "start": 1528677600,
+            "interval": 8,
+            "frequency": {
+                "type": "week",
+                "value": 1
+            },
+            "place_name": "台北101大樓",
+            "city": "台北市",
+            "area": "信義區",
+            "address": "信義路五段台北101大樓",
+            "latitude": 25.034263,
+            "longitude": 121.564553,
+            "geohash": "wsqqqm2e5",
+            "badminton_level": 2,
+            "fee": 100,
+            "place_count": 3,
+            "age_min": 18,
+            "age_max": 60,
+            "ball_brand": "victor",
+            "description": "測試開團打球囉",
+            "status": 1,
+            "remain": 10,
+            "view": 0,
+            "comment": 0,
+            "hot": 0,
+            "images": {
+                "url": [
+                    "https://obs.line-scdn.net/0hxwFY-3h_J1h7IAtXI3VYD1VzISMXTTBLEBgrYkBhOjYDVDJLWUZpPlglf21ffmBdEBJvPlgoZW0CQjMSQhM_OkIoPGlQQGVZF09r/f280x280"
+                ]
+            },
+            "user": null
+        },
+        {
+            "tag": [
+                {
+                    "createdAt": 1523169675961,
+                    "updatedAt": 1523169675961,
+                    "id": 1,
+                    "name": "飲水機"
+                }
+            ],
+            "createdAt": 1523522855552,
+            "updatedAt": 1523522855552,
+            "id": 5,
+            "group_name": "開團003",
+            "people": 100,
+            "start": 1529677600,
+            "interval": 22,
+            "frequency": {
+                "type": "week",
+                "value": 1
+            },
+            "place_name": "台北101大樓",
+            "city": "台北市",
+            "area": "信義區",
+            "address": "信義路五段台北101大樓1F",
+            "latitude": 25.034263,
+            "longitude": 121.564553,
+            "geohash": "wsqqqm2e5",
+            "badminton_level": 1,
+            "fee": 1000,
+            "place_count": 30,
+            "age_min": 10,
+            "age_max": 60,
+            "ball_brand": "victor",
+            "description": "測試開團打球囉",
+            "status": 1,
+            "remain": 100,
+            "view": 0,
+            "comment": 0,
+            "hot": 0,
+            "images": {
+                "url": [
+                    "https://obs.line-scdn.net/0hxwFY-3h_J1h7IAtXI3VYD1VzISMXTTBLEBgrYkBhOjYDVDJLWUZpPlglf21ffmBdEBJvPlgoZW0CQjMSQhM_OkIoPGlQQGVZF09r/f280x280"
+                ]
+            },
+            "user": null
+        },
+        {
+            "tag": [
+                {
+                    "createdAt": 1523169675961,
+                    "updatedAt": 1523169675961,
+                    "id": 1,
+                    "name": "飲水機"
+                }
+            ],
+            "createdAt": 1523522944913,
+            "updatedAt": 1523522944913,
+            "id": 6,
+            "group_name": "開團003",
+            "people": 100,
+            "start": 1529677600,
+            "interval": 22,
+            "frequency": {
+                "type": "week",
+                "value": 1
+            },
+            "place_name": "台北101大樓",
+            "city": "台北市",
+            "area": "信義區",
+            "address": "信義路五段台北101大樓2F",
+            "latitude": 25.034263,
+            "longitude": 121.564553,
+            "geohash": "wsqqqm2e5",
+            "badminton_level": 1,
+            "fee": 1000,
+            "place_count": 30,
+            "age_min": 10,
+            "age_max": 60,
+            "ball_brand": "victor",
+            "description": "測試開團打球囉",
+            "status": 1,
+            "remain": 100,
+            "view": 0,
+            "comment": 0,
+            "hot": 0,
+            "images": {
+                "url": [
+                    "https://obs.line-scdn.net/0hxwFY-3h_J1h7IAtXI3VYD1VzISMXTTBLEBgrYkBhOjYDVDJLWUZpPlglf21ffmBdEBJvPlgoZW0CQjMSQhM_OkIoPGlQQGVZF09r/f280x280"
+                ]
+            },
+            "user": null
+        },
+        {
+            "tag": [
+                {
+                    "createdAt": 1523169675961,
+                    "updatedAt": 1523169675961,
+                    "id": 1,
+                    "name": "飲水機"
+                }
+            ],
+            "createdAt": 1523523186588,
+            "updatedAt": 1523523186588,
+            "id": 7,
+            "group_name": "開團003",
+            "people": 100,
+            "start": 1529677600,
+            "interval": 22,
+            "frequency": {
+                "type": "week",
+                "value": 1
+            },
+            "place_name": "台北101大樓",
+            "city": "台北市",
+            "area": "信義區",
+            "address": "信義路五段台北101大樓3F",
+            "latitude": 25.034263,
+            "longitude": 121.564553,
+            "geohash": "wsqqqm2e5",
+            "badminton_level": 1,
+            "fee": 1000,
+            "place_count": 30,
+            "age_min": 10,
+            "age_max": 60,
+            "ball_brand": "victor",
+            "description": "測試開團打球囉",
+            "status": 1,
+            "remain": 100,
+            "view": 0,
+            "comment": 0,
+            "hot": 0,
+            "images": {
+                "url": [
+                    "https://obs.line-scdn.net/0hxwFY-3h_J1h7IAtXI3VYD1VzISMXTTBLEBgrYkBhOjYDVDJLWUZpPlglf21ffmBdEBJvPlgoZW0CQjMSQhM_OkIoPGlQQGVZF09r/f280x280"
+                ]
+            },
+            "user": null
+        },
+        {
+            "tag": [
+                {
+                    "createdAt": 1523169675961,
+                    "updatedAt": 1523169675961,
+                    "id": 1,
+                    "name": "飲水機"
+                }
+            ],
+            "createdAt": 1523523371708,
+            "updatedAt": 1523523371708,
+            "id": 8,
+            "group_name": "開團004",
+            "people": 100,
+            "start": 1529677600,
+            "interval": 22,
+            "frequency": {
+                "type": "week",
+                "value": 1
+            },
+            "place_name": "台北101大樓",
+            "city": "台北市",
+            "area": "信義區",
+            "address": "信義路五段台北101大樓4F",
+            "latitude": 25.034263,
+            "longitude": 121.564553,
+            "geohash": "wsqqqm2e5",
+            "badminton_level": 1,
+            "fee": 1000,
+            "place_count": 30,
+            "age_min": 10,
+            "age_max": 60,
+            "ball_brand": "victor",
+            "description": "測試開團打球囉",
+            "status": 1,
+            "remain": 100,
+            "view": 0,
+            "comment": 0,
+            "hot": 0,
+            "images": {
+                "url": [
+                    "https://obs.line-scdn.net/0hxwFY-3h_J1h7IAtXI3VYD1VzISMXTTBLEBgrYkBhOjYDVDJLWUZpPlglf21ffmBdEBJvPlgoZW0CQjMSQhM_OkIoPGlQQGVZF09r/f280x280"
+                ]
+            },
+            "user": null
+        },
+        {
+            "tag": [
+                {
+                    "createdAt": 1523169675961,
+                    "updatedAt": 1523169675961,
+                    "id": 1,
+                    "name": "飲水機"
+                },
+                {
+                    "createdAt": 1523169697932,
+                    "updatedAt": 1523169697932,
+                    "id": 2,
+                    "name": "提供球拍"
+                },
+                {
+                    "createdAt": 1523169704979,
+                    "updatedAt": 1523169704979,
+                    "id": 3,
+                    "name": "冷氣"
+                }
+            ],
+            "createdAt": 1523513147661,
+            "updatedAt": 1523513147661,
+            "id": 2,
+            "group_name": "開團001",
+            "people": 50,
+            "start": 1523677600,
+            "interval": 11,
+            "frequency": {
+                "type": "week",
+                "value": 1
+            },
+            "place_name": "台灣大學圖書館",
+            "city": "台北市",
+            "area": "大安區",
+            "address": "羅斯福路四段1號",
+            "latitude": 25.017404,
+            "longitude": 121.540518,
+            "geohash": "wsqqmdr0g",
+            "badminton_level": 3,
+            "fee": 10,
+            "place_count": 2,
+            "age_min": 16,
+            "age_max": 40,
+            "ball_brand": "victor",
+            "description": "測試開團打球囉",
+            "status": 1,
+            "remain": 50,
+            "view": 0,
+            "comment": 0,
+            "hot": 0,
+            "images": {
+                "url": [
+                    "https://obs.line-scdn.net/0hxwFY-3h_J1h7IAtXI3VYD1VzISMXTTBLEBgrYkBhOjYDVDJLWUZpPlglf21ffmBdEBJvPlgoZW0CQjMSQhM_OkIoPGlQQGVZF09r/f280x280"
+                ]
+            },
+            "user": null
+        }
+    ]
+}

@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import "./index.css";
+import { Wrapper } from "./styled"
 
 class InputButton extends Component {
     render() {
         const { name, options, input, onChange, onClick } = this.props;
         return (
-            <div className="input-button">
+            <Wrapper className="input-button">
                 <input type="text" {...input} onChange={onChange} />
                 <button onClick={onClick}>
                     <img src="./assets/icons/search.png" alt="" />
                     搜尋
                 </button>
-            </div>
+            </Wrapper>
         );
     }
 }

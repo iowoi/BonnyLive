@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
     background: #a5a5a5;
     color: #fff;
     font-size: 12px;
@@ -9,26 +9,27 @@ export const Wrapper = styled.div `
 
     .btn {
         color: #fff;
-        width: 50px;
+        width: 55px;
         padding: 0;
         background: none;
         border: none;
     }
 
-    .date>div {
+    .date > div {
         display: inline-block;
-        width: 36.5%;
+        width: calc(42.5% - 32.5px);
+        margin: 0 5px;
     }
 
     .date {
         input {
-            width: 91%;
+            width: calc(100% - 12px);
             height: 30px;
+            padding: 0 5px;
         }
         .select {
             width: 15%;
             select {
-                margin-left: 5px;
                 height: 32px;
                 width: 100%;
                 position: relative;
@@ -40,25 +41,22 @@ export const Wrapper = styled.div `
     .input-button {
         margin: 0 7px;
         width: calc(100% - 150px);
+        input {
+            width: calc(100% - 70px);
+            height: 30px;
+        }
     }
-
-    .input-button input {
-        width: calc(100% - 70px);
-        height: 30px;
-    }
-
     .search-info {
-        margin-top: 10px;
+        margin-top: 8px;
     }
-
-    .search-info, .loc {
+    .search-info,
+    .loc {
         display: -webkit-flex;
         -webkit-flex-wrap: wrap;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
     }
-
     .loc img,
     .loc span,
     .input-button,
@@ -70,5 +68,4 @@ export const Wrapper = styled.div `
         height: 15px;
         margin-right: 5px;
     }
-
-`
+`;

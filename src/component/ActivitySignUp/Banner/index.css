@@ -15,3 +15,9 @@
 .banner-slide .slick-dots li button:before {
     color: #fff;
 }
+
+@media (max-width: 480px) {
+    .banner-slide {
+        border-radius: 0px;
+    }
+}

@@ -57,10 +57,9 @@ class NewGroup extends Component {
                     <CourtPriceSelect />
                     <CourtSizeSelect />
                     <AgeSelect />
-                    <div className="image-uploader-section">
+                    <FormControl>
                         <ImageUploader />
-                        {/* TODO form-control should used like this not before */}
-                    </div>
+                    </FormControl>
                     <FormControl>
                         <CourtFeatures />
                     </FormControl>

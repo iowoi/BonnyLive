@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 export const Wrapper = styled.header`
     text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 57px;
     .logo {
         margin-top: 7px;
         position: absolute;
@@ -42,18 +47,16 @@ export const Wrapper = styled.header`
 `;
 
 export const SideNav = styled.div`
-    height: 100%;
+    height: 100vh;
     width: ${props => (props.menuOpen ? "350px" : 0)};
-    position: absolute;
-    z-index: 1;
-    left: 0;
     background-color: #f9fafb;
     overflow-x: hidden;
     padding-top: 60px;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
-    @media (max-width: 480px) {
-        width: ${props => (props.menuOpen ? "100%" : 0)};
-    }
+    -webkit-box-shadow: 15px 3px 73px -27px rgba(0,0,0,0.7);
+    -moz-box-shadow: 15px 3px 73px -27px rgba(0,0,0,0.7);
+    box-shadow: 15px 3px 73px -27px rgba(0,0,0,0.7);
     a {
         text-decoration: none;
         font-size: 16px;
@@ -67,7 +70,7 @@ export const SideNav = styled.div`
         img {
             position: absolute;
             left: 0px;
-            top: 10px;
+            top: 12px;
         }
         .btn-close {
             position: absolute;
@@ -78,6 +81,20 @@ export const SideNav = styled.div`
         }
         &:hover {
             color: #fff;
+        }
+    }
+    @media (max-width: 480px) {
+        width: ${props => (props.menuOpen ? "80%" : 0)};
+    }
+    @media (max-width: 320px) {
+        width: ${props => (props.menuOpen ? "100%" : 0)};
+        padding-top: 22px;
+        a {
+            line-height: 65px;
+            img {
+                left: 1px;
+                top: 8px;
+            }
         }
     }
 `;

@@ -4,8 +4,10 @@ import styled from 'styled-components';
 export const Wrapper = styled.div `
     padding: 17.5px 0;
     background: #DA263C;
-    z-index:2;
-    position: relative;   
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
     .nav {
         width: 530px;
         margin: 0 auto;
@@ -32,4 +34,21 @@ export const Wrapper = styled.div `
             }
         }
     }
+    @media (max-width: 480px) {
+        padding: 0;
+        .nav {
+            width: 100%;
+            a {
+                width:20%;
+                font-size: 10px;
+                img {
+                    position: absolute;
+                    left: 50%;
+                    margin: -42px 0 0 -21px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+
 `

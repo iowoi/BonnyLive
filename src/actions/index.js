@@ -1,2 +1,4 @@
-export * from './loginActions';
-export * from './registerActions';
+import { fetchActivity } from "./activityActions";
+import registerActions from "./registerActions";
+
+export { fetchActivity, registerActions };

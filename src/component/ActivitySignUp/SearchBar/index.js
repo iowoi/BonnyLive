@@ -1,14 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
+import ModalContent from "../ModalContent";
 import {
     DatePicker,
     Select,
     InputButton,
     Modal,
     SkillLevelSelect,
-    TimePicker
+    TimePicker,
+    CourtAddress
 } from "../../../component/Common";
 import { Wrapper } from "./styled";
-
 const options = [
     {
         text: "人數",
@@ -19,46 +20,43 @@ const options = [
 ];
 
 for (let i = 1; i <= 30; i++) {
-    options.push({
-        text: i,
-        value: i
-    });
+    options.push({ text: i, value: i });
 }
 
 const inputOption = {
     placeholder: "團名/課程",
-    name: "name"
+    name: "name",
+    value: ""
 };
 
-const ModalContent = () => (
-    <div>
-        <label>打球時段</label>
-        <TimePicker />
-        <TimePicker />
-        <SkillLevelSelect />
-    </div>
-);
+export default class SearchBar extends Component {
+    render() {
+        const { onSubmit } = this.props;
 
-export default () => {
-    return (
-        <Wrapper>
-            <div className="date">
-                日期: <DatePicker /> - <DatePicker />
-                <Select options={options} />
-            </div>
-            <div className="search-info">
-                <div className="loc">
-                    <img src="./assets/icons/location.png" alt="" />
-                    <span>台北 - 大安</span>
+        return (
+            <Wrapper>
+                <div className="date">
+                    日期:
+                    <DatePicker />
+                    -
+                    <DatePicker />
+                    <Select options={options} />
                 </div>
-                <InputButton input={inputOption} />
-                <Modal
-                    title="進階搜尋"
-                    btnClass="btn"
-                    btnText="進階搜尋"
-                    modalContent={<ModalContent />}
-                />
-            </div>
-        </Wrapper>
-    );
-};
+                <div className="search-info">
+                    <div className="loc">
+                        <img src="./assets/icons/location.png" alt="" />
+                        <span>台北 - 大安</span>
+                    </div>
+                    <InputButton input={inputOption} onClick={onSubmit} />
+                    <Modal
+                        title="進階搜尋"
+                        btnClass="btn"
+                        btnText="進階搜尋"
+                        onClick={onSubmit}
+                        modalContent={<ModalContent />}
+                    />
+                </div>
+            </Wrapper>
+        );
+    }
+}

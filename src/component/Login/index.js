@@ -1,101 +1,65 @@
-import React from "react";
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import Account from './AccountInput';
+import Password from './LoginPasswordInput';
+import { SkillLevelSelect } from "../../component/Common";
+import ThirdParty from './ThirdPartyButton';
+import SubmitButton from './SubmitButton';
+import RememberMe from './RememberMeClick';
 import { Wrapper } from './styled';
+import { FormControl } from "../Common";
 
-
-class NameForm extends React.Component {
+class NewGroup extends Component {
     constructor(props) {
-      super(props);
-      this.state = {value: ''};
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
+        super(props);
+        this.state = {
+            Name: '',
+            Email: '',
+            MobilePhone: '',
+            Password: '',
+            AuthPassword:''
+        };
+
+        // this.handleGroupNameChange = this.handleGroupNameChange.bind(this);
+        // this.handleCourtNameChange = this.handleCourtNameChange.bind(this);
+        // this.handleCourtAddressChange = this.handleCourtAddressChange.bind(this);
     }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
+
+    // handleGroupNameChange(e) {
+    //     this.setState({ groupName: e.target.value });
+    // }
+
+    // handleCourtNameChange(e) {
+    //     this.setState({ courtName: e.target.value });
+    // }
+
+    // handleCourtAddressChange(e) {
+    //     this.setState({ courtAddress: e.target.value });
+    // }
+
+    handleSubmit = (e) => {
+        alert('submit value: ' + JSON.stringify(this.state))
+        e.preventDefault();
     }
-  
-    handleInputChange(event) {
-      const target = event.target;
-      const value = target.type === 'checkbox' ? target.checked : target.value;
-      const name = target.name;
-  
-      this.setState({
-        [name]: value
-      });
-    }
-  
-    handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
-      event.preventDefault();
-    }
-  
+
     render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-          <table>
-            <tr>
-              <td  className="title" colSpan="2"><h1 >我要登入</h1></td>
-            </tr>
-            <tr>
-              <td colSpan="2">
-                <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="帳號"/>
-              </td>
-            </tr>
-            <tr>
-              <td colSpan="">
-                <input type="password" value={this.state.value} onChange={this.handleChange} placeholder="密碼"/>
-              </td>
-            </tr>
-            <tr>
-              <td colSpan="2">
-                <input type="submit" value="BonnyLIVE登入" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input
-                  name="isGoing"
-                  type="checkbox"
-                  checked={this.state.isGoing}
-                  onChange={this.handleInputChange} />記住我
-              </td>
-              <td>
-                <a href="#">忘記密碼?</a>
-              </td>
-            </tr>
-            <tr>
-              <td className="title"><h5>其他登入方式:</h5></td>
-            </tr>
-            <tr>
-            <button>LINE</button>
-            <button>Facebook</button>
-            <button>Google+</button>
-            </tr>
-            <hr />
-            <tr>
-            <td  className="text"><h2>還不是會員嗎?</h2></td>
-            </tr>
-            <tr>
-            <button className="input-button">立即註冊</button>
-            </tr>
-          </table>
-        </form>
+        const { name, label } = this.props;
 
-      );
+        return (
+            <Wrapper>
+                <form onSubmit={this.handleSubmit} className="main-form">
+                    <h1 class="title">我要登入</h1>
+                    <Account />
+                    <Password />
+                    <SubmitButton />
+                    <FormControl>
+                        <ThirdParty />
+                    </FormControl>
+                </form>
+                <RememberMe /> 
+            </Wrapper>
+
+        );
     }
-  }
+}
 
-
-export default () => {
-    return (
-        <Wrapper>
-        <div>
-         <NameForm/>      
-        </div>
-        </Wrapper>
-
-      );
-
-};
+export default NewGroup

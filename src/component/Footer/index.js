@@ -3,9 +3,6 @@ import {Wrapper} from './styled';
 import {Link} from 'react-router-dom';
 
 class Footer extends Component {
-    constructor(props){
-        super(props)
-    }
     render() {
         return (
             <Wrapper>
@@ -22,7 +19,7 @@ class Footer extends Component {
                     <Link to="/activitySignUp">
                         <img src="./assets/icons/HotLiveMenu.png" alt=""/>
                         Live 直播</Link>
-                    <Link to="/activitySignUp">
+                    <Link to="/login">
                         <img src="./assets/icons/MyBonnyMenu.png" alt=""/>
                         My Bonny</Link>
                 </div>
