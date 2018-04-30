@@ -37,11 +37,8 @@ export default class extends Component {
                     </p>
                     <small>{moment(data.start).format("YYYY/MM/DD LT")}</small>
                     <small>
-                        {data.fee}/每人 | 尚缺 {data.remain} 人 | 4/25報名截止
+                        {data.fee}/每人 | 尚缺 {data.remain} 人
                     </small>
-                    {/* <Button id="id" width="100" type="submit" onClick={onClick}>
-                        Button
-                    </Button> */}
                 </div>
             </Wrapper>
         );

@@ -13,15 +13,19 @@ export default class Banner extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1
         };
+        const {data} = this.props
         return (
             <Slider {...settings} className="banner-slide">
-                <div>
-                    <img src="./assets/images/04-banner.jpg" alt=""/>
-                </div>
-                <div>
-                    <h3>2</h3>
-                </div>
+                {data.map((item, i)=>
+                    <div key={i}>
+                        <img src={item.url} alt={item.name}/>
+                    </div>
+                )}
             </Slider>
         );
     }
+}
+
+Banner.defaultProps = {
+	data: []
 }

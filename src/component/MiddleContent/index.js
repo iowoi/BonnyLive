@@ -6,7 +6,7 @@ import ActivitySignUp from "../ActivitySignUp";
 import Login from "../Login";
 import Register from "../Register";
 import NewGroup from "../NewGroup";
-
+import SelectLocation from "../SelectLocation";
 class MiddleContent extends Component {
     render() {
         return [
@@ -15,6 +15,7 @@ class MiddleContent extends Component {
                 <Route path="/newGroup" component={NewGroup}/>
                 <Route path="/Login" component={Login}/>
                 <Route path="/Register" component={Register}/>
+                <Route path="/selectLocation" component={SelectLocation}/>
             </Wrapper>,
             <Footer key="1"/> 
         ]

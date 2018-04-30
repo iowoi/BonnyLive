@@ -68,4 +68,10 @@ export const Wrapper = styled.div`
         height: 15px;
         margin-right: 5px;
     }
+    .right-date {
+        transform: translate3d(50%, 209px, 0px) !important;
+        .react-datepicker__triangle {
+            margin-left: 25% !important;
+        }
+    }
 `;

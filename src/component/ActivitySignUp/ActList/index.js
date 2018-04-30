@@ -3,9 +3,9 @@ import Card from "./Card";
 
 class ActList extends Component {
     render() {
-        const activities = this.props.data.activity;
+        const activities = this.props.data;
         return [
-            activities.map((data, i) => {
+            activities && activities.map((data, i) => {
                 return <Card key={i} data={data} />;
             })
         ];
