@@ -19,7 +19,6 @@ const queryString = params => Object.keys(params).map(key => key + '=' + params[
 export const fetchActivity = () => {
     return (dispatch,getState) => {
         const query = queryString(getState().data.query)
-        console.log(query)
         fetch(`${API_URL}/activity/list?${query}`, header)
             .then(function(response) {
                 return response.json();

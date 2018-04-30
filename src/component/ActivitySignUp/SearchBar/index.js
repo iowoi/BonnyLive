@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import ModalContent from "../ModalContent";
 import {
     DatePicker,
@@ -29,12 +30,13 @@ export default class SearchBar extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleDatePickerChange = this.handleDatePickerChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {}
+        this.state = {};
     }
 
     handleInputChange(e) {
         const target = e.target;
-        const value = target.type === "checkbox" ? target.checked : target.value;
+        const value =
+            target.type === "checkbox" ? target.checked : target.value;
         const inputName = target.name;
         this.setState({
             [inputName]: value
@@ -45,7 +47,7 @@ export default class SearchBar extends Component {
         this.setState(state);
     }
 
-    handleSubmit(){
+    handleSubmit() {
         this.props.onUpdateSearch(this.state);
         this.props.onSubmit();
     }
@@ -56,21 +58,32 @@ export default class SearchBar extends Component {
             <Wrapper>
                 <div className="date">
                     日期:
-                    <DatePicker name="start" onChange={this.handleDatePickerChange}/>
+                    <DatePicker
+                        name="start"
+                        onChange={this.handleDatePickerChange}
+                    />
                     -
-                    <DatePicker className="right-date" name="end" onChange={this.handleDatePickerChange}/>
-                    <Select options={options} name="remain" onChange={this.handleInputChange}/>
+                    <DatePicker
+                        className="right-date"
+                        name="end"
+                        onChange={this.handleDatePickerChange}
+                    />
+                    <Select
+                        options={options}
+                        name="remain"
+                        onChange={this.handleInputChange}
+                    />
                 </div>
                 <div className="search-info">
-                    <div className="loc">
+                    <Link className="loc" to="/selectLocation">
                         <img src="./assets/icons/location.png" alt="" />
                         <span>台北 - 大安</span>
-                    </div>
+                    </Link>
                     <InputButton
                         input={{
                             placeholder: "團名/課程",
                             name: "search",
-                            value: search || ''
+                            value: search || ""
                         }}
                         onClick={this.handleSubmit}
                         onChange={this.handleInputChange}

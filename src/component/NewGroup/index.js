@@ -63,7 +63,7 @@ class NewGroup extends Component {
                     <FormControl>
                         <CourtFeatures />
                     </FormControl>
-                    <SubmitButton />
+                    <SubmitButton text="我要開團" imgType="search"/>
                 </form>
             </Wrapper>
         );
