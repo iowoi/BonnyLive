@@ -1,50 +1,92 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { updateSearch } from "../../actions";
 import { Wrapper } from "./styled";
-import { Select } from "../Common";
+import { Select, SubmitButton } from "../Common";
 import { CityData } from "./tw-city";
-import SubmitButton from "../Common/SubmitButton";
+
+const counties = [
+    {
+        value: "選擇其他縣市",
+        disabled: true
+    }
+];
+
+const makeAreaOption = () => {
+    const districts = [];
+
+    CityData.counties.map(value => counties.push({ value: value }));
+    CityData.districts[0][0].map(value =>
+        districts.push({ text: `--- 台北市 ${value}---`, value: value })
+    );
+
+    return districts;
+};
 
 class SelectLocation extends Component {
     constructor(props) {
         super(props);
-        const counties = [{ value: "選擇其他縣市" }];
-        const districts = [];
-        CityData.counties.map(value => counties.push({ value: value }));
-        CityData.districts[0][0].map(value =>
-            districts.push({ value: `--- 台北市 ${value}---` })
-        );
         this.state = {
             cityOptions: counties,
-            areaOptions: districts
+            areaOptions: makeAreaOption(),
+            area: props.data.query.area,
+            city: props.data.query.city
         };
         this.handleSelect = this.handleSelect.bind(this);
+        this.handleSelectArea = this.handleSelectArea.bind(this);
+        this.handleUpdateSearch = this.handleUpdateSearch.bind(this);
     }
     handleSelect(e) {
         const index = e.nativeEvent.target.selectedIndex;
         const currentCity = e.target.value;
         const districts = [];
-        CityData.districts[index][0].map(value =>
-            districts.push({ value: `--- ${currentCity} ${value}---` })
+        CityData.districts[index - 1][0].map(value =>
+            districts.push({
+                text: `--- ${currentCity} ${value}---`,
+                value: value
+            })
         );
         this.setState({
+            city: currentCity,
+            area: CityData.districts[index][0][0],
             areaOptions: districts
         });
     }
+    handleSelectArea(e) {
+        this.setState({
+            area: e.target.value
+        });
+    }
+    handleUpdateSearch() {
+        const data = {
+            area: this.state.area,
+            city: this.state.city
+        };
+        this.props.onUpdateSearch(data);
+        this.props.history.push("/activitySignUp");
+    }
     render() {
         const { data } = this.props;
-        const { cityOptions, areaOptions } = this.state;
+        const { cityOptions, areaOptions, area, city } = this.state;
 
         return (
             <Wrapper>
                 <img src="/assets/images/TaipeiBanner.jpg" className="banner" />
                 <div className="main-form">
-                    <Select options={areaOptions} />
                     <Select
+                        value={area}
+                        options={areaOptions}
+                        onChange={this.handleSelectArea}
+                    />
+                    <Select
+                        value={city}
                         options={cityOptions}
                         onChange={this.handleSelect}
                     />
-                    <SubmitButton text="確認" />
+                    <SubmitButton
+                        text="確認"
+                        onClick={this.handleUpdateSearch}
+                    />
                 </div>
             </Wrapper>
         );
@@ -53,9 +95,11 @@ class SelectLocation extends Component {
 
 const mapStateToProps = state => ({
     loading: state.loading,
-    data: state.data
+    data: state.activity
 });
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+    onUpdateSearch: updateSearch
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SelectLocation);

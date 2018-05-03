@@ -13,11 +13,16 @@ export const Wrapper = styled.div `
         font-size: 16px;
         cursor: pointer;
         border-radius: 60px;
-        margin:3px
+        margin:4px
         font-family: Microsoft JhengHei
     }
 
-    
+    .htext{
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        font-family: Microsoft JhengHei
+      }
  
 
     .group:hover {
@@ -26,6 +31,15 @@ export const Wrapper = styled.div `
       }
 
    
+      .hr {
+        color: #000000;
+        margin-top:10%
+    }
+    
+    
+
+
+
 `
 
 

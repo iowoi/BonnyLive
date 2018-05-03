@@ -9,18 +9,13 @@ export default class CourtFeatures extends Component {
        
         return (
             <Wrapper>
-                <label>興趣/目的: (可複選)</label>
+                <label class="text">其他登入方式:</label>
                 <div>
-                <button class="btn group">健身</button>
-                <button class="btn group">減肥</button>
-                <button class="btn group">訓練</button>
+                <button class="line">LINE</button>
+                <button class="facebook">facebook</button>
+                <button class="google">Google+</button>
                 </div>
-                <div>
-                <button class="btn group">跑步</button>
-                <button class="btn group">交友</button>
-                <button class="btn group">自行車</button>
-                <hr />
-                </div>
+                <hr className='hr'/>
             </Wrapper>
         );
     }

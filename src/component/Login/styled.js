@@ -17,18 +17,21 @@ select{
         color: #000000
         border-radius: 5px
         font-family: Microsoft JhengHei
-
+    }   
     a{
         color: #fff;
     }
 
-    .text {
-        font-size: 8px;
-        font-weight: bold;
-        color: #000000;
+    .Thirdtext {
+        text-align: center;
+        width:100%
+        font-size: 25px;
+        font-weight:bold;
+        color: #000000
+        font-family: Microsoft JhengHei
       }
 
-
+   
 
 
 `

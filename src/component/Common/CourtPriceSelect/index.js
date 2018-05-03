@@ -17,7 +17,7 @@ export default class CourtPriceSelect extends Component {
 
         return (
             <FormControl>
-                <Select label={"打球費用："} options={options} />
+                <Select label={"打球費用："} options={options} onChange={this.props.onChange} value={this.props.value} />
             </FormControl>
         );
     }

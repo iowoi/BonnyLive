@@ -4,10 +4,18 @@ import { FormControl } from "../../../component/Common";
 
 export default class SkillLevelSelect extends Component {
     options() {
-        //todo load from api
         var options = [];
-        options.push({ value: `入門` })
-        return options
+
+        if (this.props.levels) {
+            for (var i = 0; i < this.props.levels.length; i++) {
+                options.push({
+                    text: this.props.levels[i].description,
+                    value: this.props.levels[i].id
+                });
+            }
+        }
+
+        return options;
     }
 
     render() {
@@ -15,7 +23,13 @@ export default class SkillLevelSelect extends Component {
 
         return (
             <FormControl>
-                <Select label={"打球程度："} options={options} />
+                <Select
+                    name="badminton_level"
+                    label={"打球程度："}
+                    options={options}
+                    onChange={this.props.onChange}
+                    value={this.props.value}
+                />
             </FormControl>
         );
     }

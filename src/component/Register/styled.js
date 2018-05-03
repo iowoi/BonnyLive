@@ -7,6 +7,7 @@ export const Wrapper = styled.div `
     select{
         width:100%
     };
+    position:relative;
    
     .title {
             text-align: center;
@@ -17,19 +18,33 @@ export const Wrapper = styled.div `
             color: #000000
             border-radius: 5px
             font-family: Microsoft JhengHei
-    
-        a{
-            color: #fff;
+             }
+    .link{
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        padding-left:0px; 
+        padding-right:10px; 
+        padding-bottom:50px; 
+        color: #000000;
+        font-family: Microsoft JhengHei
         }
     
         .text {
-            font-size: 8px;
+            text-align: center;
+            font-size: 18px;
             font-weight: bold;
+            padding-left:30px; 
+            padding-right:10px; 
+            padding-bottom:40px; 
             color: #000000;
+            font-family: Microsoft JhengHei
           }
     
+
+
    
-`
+`;
 
    
 

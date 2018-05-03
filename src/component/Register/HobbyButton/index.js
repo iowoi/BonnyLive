@@ -3,13 +3,13 @@ import { FormControl } from "../../../component/Common";
 import { Wrapper } from './styled';
 
 
-export default class CourtFeatures extends Component {
+export default class Hobby extends Component {
 
     render() {
        
         return (
             <Wrapper>
-                <label>興趣/目的: (可複選)</label>
+                <label class="htext">興趣/目的: (可複選)</label>
                 <div>
                 <button class="btn group">健身</button>
                 <button class="btn group">減肥</button>
@@ -19,7 +19,7 @@ export default class CourtFeatures extends Component {
                 <button class="btn group">跑步</button>
                 <button class="btn group">交友</button>
                 <button class="btn group">自行車</button>
-                    <hr />
+                    <hr className= 'hr' />
                 </div>
             </Wrapper>
         );

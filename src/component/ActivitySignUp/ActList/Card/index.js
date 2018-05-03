@@ -35,7 +35,9 @@ export default class extends Component {
                     <p>
                         {data.area} - {data.place_name}
                     </p>
-                    <small>{moment(data.start).format("YYYY/MM/DD LT")}</small>
+
+
+                    <small>{moment.unix(data.start).utc().format("YYYY/MM/DD LT")}</small>
                     <small>
                         {data.fee}/每人 | 尚缺 {data.remain} 人
                     </small>

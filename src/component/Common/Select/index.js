@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 class SelectComponent extends Component {
     render() {
-        const { name, label, options, onChange } = this.props;
+        const { name, label, options, onChange, value } = this.props;
         return (
             <div className="select">
                 {label && <label htmlFor={name}>{label}</label>}
-                <select name={name} defaultValue="" onChange={onChange}>
+                <select name={name} value={value} onChange={onChange}>
                     {options.map((opt, index) => (
                         <option
                             value={opt.value}
@@ -24,7 +24,7 @@ class SelectComponent extends Component {
 
 SelectComponent.defaultProps = {
     label: "",
-    onChange: ()=>{},
+    onChange: () => {},
     error: null
 };
 

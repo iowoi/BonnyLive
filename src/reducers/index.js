@@ -1,5 +1,16 @@
 import { combineReducers } from "redux";
-import data from "./dataReducer";
+import activity from "./activityReducer";
+import myInfo from "./myInfo";
+import NewGroup from "./NewGroup";
+import groupDetailReducer from "./groupDetailReducer";
+import comment from './comment';
+import user from './user';
+
 export default combineReducers({
-    data
+    activity: activity,
+    myInfoReducer: myInfo,
+    newGorupReducer: NewGroup,
+    groupDetailReducer: groupDetailReducer,
+    commentReducer: comment,
+  userReducer: user
 });

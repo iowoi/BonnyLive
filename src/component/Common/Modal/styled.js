@@ -9,7 +9,7 @@ export const Buttons = styled.div`
         width: 50%;
         font-size: 18px;
     }
-`
+`;
 export const LeftButton = styled.button`
     border-bottom-left-radius: 20px;
     border-right: 1px solid #fff;

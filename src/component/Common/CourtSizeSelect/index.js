@@ -18,7 +18,7 @@ export default class CourtSizeSelect extends Component {
 
         return (
             <FormControl>
-                <Select label={"場地數/面："} options={options} />
+                <Select label={"場地數/面："} options={options} onChange={this.props.onChange} value={this.props.value}/>
             </FormControl>
         );
     }

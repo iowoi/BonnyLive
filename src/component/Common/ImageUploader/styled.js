@@ -10,7 +10,9 @@ export const Wrapper = styled.div`
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    
+    background-color: #EBEBEB
+    padding: 5px 30px 5px 30px
+    margin-left: -15px
     input{
         display: flex;
     }

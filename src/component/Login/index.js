@@ -4,6 +4,7 @@ import Password from './LoginPasswordInput';
 import { SkillLevelSelect } from "../../component/Common";
 import ThirdParty from './ThirdPartyButton';
 import SubmitButton from './SubmitButton';
+import RegisterButton from './RegisterButton';
 import RememberMe from './RememberMeClick';
 import { Wrapper } from './styled';
 import { FormControl } from "../Common";
@@ -51,11 +52,13 @@ class NewGroup extends Component {
                     <Account />
                     <Password />
                     <SubmitButton />
+                    <RememberMe /> 
                     <FormControl>
                         <ThirdParty />
                     </FormControl>
+                    <h1 class="Thirdtext">還不是會員嗎?</h1>
+                    <RegisterButton />
                 </form>
-                <RememberMe /> 
             </Wrapper>
 
         );

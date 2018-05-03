@@ -16,7 +16,7 @@ export default class GroupPeopleNumberSeelct extends Component {
 
         return (
             <div className="form-control">
-                <Select label={"徵求人數："} options={options} />
+                <Select label={"徵求人數："} options={options} values={this.props.value} onChange={this.props.onChange} />
             </div>
         );
     }

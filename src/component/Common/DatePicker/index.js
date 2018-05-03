@@ -14,15 +14,15 @@ export default class DateInput extends Component {
     handleChange(date) {
         this.setState({
             [this.props.name]: date
-        });
-        this.props.onChange(this.state)
+        },()=>{
+            this.props.onChange(this.state)
+        })
     }
 
     render() {
         return (
             <DatePicker
                 popperClassName={this.props.className}
-                name={this.props.name}
                 selected={this.state[this.props.name]}
                 onChange={this.handleChange}
             />

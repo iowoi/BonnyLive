@@ -24,13 +24,15 @@ for (let i = 1; i <= 30; i++) {
     options.push({ text: i, value: i });
 }
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
     constructor(props) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleDatePickerChange = this.handleDatePickerChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {};
+        this.state = {
+            search: props.data.query.search || ''
+        };
     }
 
     handleInputChange(e) {
@@ -46,7 +48,10 @@ export default class SearchBar extends Component {
     handleDatePickerChange(state) {
         this.setState(state);
     }
-
+    handleBlur = () => {
+        this.props.onUpdateSearch(this.state);
+    }
+    
     handleSubmit() {
         this.props.onUpdateSearch(this.state);
         this.props.onSubmit();
@@ -54,6 +59,7 @@ export default class SearchBar extends Component {
 
     render() {
         const { search, start, end } = this.state;
+        const { data, levels, onUpdateSearch } = this.props;
         return (
             <Wrapper>
                 <div className="date">
@@ -77,13 +83,17 @@ export default class SearchBar extends Component {
                 <div className="search-info">
                     <Link className="loc" to="/selectLocation">
                         <img src="./assets/icons/location.png" alt="" />
-                        <span>台北 - 大安</span>
+                        <span>
+                            {data.query.city.substring(0, 2)} -{" "}
+                            {data.query.area.substring(0, 2)}
+                        </span>
                     </Link>
                     <InputButton
                         input={{
                             placeholder: "團名/課程",
                             name: "search",
-                            value: search || ""
+                            value: search,
+                            onBlur: this.handleBlur
                         }}
                         onClick={this.handleSubmit}
                         onChange={this.handleInputChange}
@@ -93,10 +103,17 @@ export default class SearchBar extends Component {
                         btnClass="btn"
                         btnText="進階搜尋"
                         onClick={this.handleSubmit}
-                        modalContent={<ModalContent />}
+                        modalContent={
+                            <ModalContent
+                                levels={levels}
+                                onChange={this.handleInputChange}
+                            />
+                        }
                     />
                 </div>
             </Wrapper>
         );
     }
 }
+
+export default SearchBar;

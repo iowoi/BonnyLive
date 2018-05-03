@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     color: #fff;
     font-size: 12px;
     padding: 10px 5px;
-
+    overflow: hidden;
     .btn {
         color: #fff;
         width: 55px;
@@ -45,23 +45,49 @@ export const Wrapper = styled.div`
             width: calc(100% - 70px);
             height: 30px;
         }
+        @media (max-width: 375px) {
+            width: calc(100% - 190px);
+            input {
+                width: calc(100% - 80px);
+            }
+        }
+        @media (max-width: 320px) {
+            input {
+                width: calc(100% - 75px);
+            }
+        }
     }
     .search-info {
         margin-top: 8px;
+        a {
+            width: 22%;
+        }
+        .input-button {
+            width: 59%;
+        }
+        @media (max-width: 320px) {
+            a {
+                width: 26%;
+            }
+            .input-button {
+                width: 51%;
+            }
+        }
     }
     .search-info,
     .loc {
         display: -webkit-flex;
         -webkit-flex-wrap: wrap;
         display: flex;
-        flex-wrap: wrap;
+        color: #fff;
+        text-decoration: none;
         align-items: center;
     }
     .loc img,
     .loc span,
     .input-button,
     .btn {
-        display: flex;
+        float: left;
     }
 
     .loc img {

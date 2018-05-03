@@ -11,11 +11,11 @@ const customStyles = {
         bottom: "auto",
         marginRight: "-50%",
         transform: "translate(-50%, -50%)",
-        width: "calc(90% - 40px)",
+        width: "320px",
         borderRadius: "20px",
-        maxHeight: "calc(100vh - 186px)",
+        maxHeight: "calc(92vh - 197px)",
         overlay: {
-            background: "rgba(0, 0, 0, 0.75)"
+            backgroundColor: "rgba(0, 0, 0, 0.25)"
         }
     }
 };
@@ -71,7 +71,6 @@ export default class ModalBox extends React.Component {
                 <h2 style={{ textAlign: "center" }}>{title}</h2>
                 {modalContent}
                 {btnTheme === "two" ? (
-                    
                     <Buttons>
                         <LeftButton onClick={this.props.onClick}>
                             送出
@@ -80,7 +79,6 @@ export default class ModalBox extends React.Component {
                             取消
                         </RightButton>
                     </Buttons>
-                    
                 ) : (
                     <button onClick={this.closeModal}>取消</button>
                 )}

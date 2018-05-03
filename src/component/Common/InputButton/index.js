@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Wrapper } from "./styled"
+import { Wrapper } from "./styled";
 
 class InputButton extends Component {
     render() {

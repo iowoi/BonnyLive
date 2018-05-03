@@ -1,23 +1,18 @@
 import React, { Component } from "react";
 import { Wrapper } from "./styled";
 
-class SubmitButton extends Component {
+export default class SubmitButton extends Component {
   render() {
-    const { name, options, input, onChange, onClick } = this.props;
+    const {  onSubmit } = this.props;
     return (
-        <Wrapper onClick={onClick}>
-          確認註冊
+        <Wrapper>
+          <div>
+          <span onClick={onSubmit}>確認註冊</span>
           <img src="./assets/icons/ArrowW.png" alt="" />
+          </div>
         </Wrapper>
     );
   }
 }
 
-SubmitButton.defaultProps = {
-  label: "",
-  onChange: null,
-  error: null,
-  onClick: null
-};
 
-export default SubmitButton;

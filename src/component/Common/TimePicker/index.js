@@ -2,27 +2,13 @@ import React, { Component } from "react";
 import moment from "moment";
 
 export default class TimePicker extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            startDate: moment()
-        };
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-    handleChange(date) {
-        this.setState({
-            startDate: date
-        });
-    }
-
     listTimeOptions() {
-        var times =[];
-        for(let i=0; i<24; i++){
-            times.push({val: `${i}:00`, key: `${i}_0`})
-            times.push({val: `${i}:30`, key: `${i}_30`})
+        var times = [];
+        for (let i = 0; i < 24; i++) {
+            times.push({ val: `${i}:00`, key: `${i}:00` });
+            times.push({ val: `${i}:30`, key: `${i}:30` });
         }
-        return times
+        return times;
     }
 
     render() {
@@ -33,9 +19,9 @@ export default class TimePicker extends Component {
                 {val}
             </option>
         ));
-
+        const { name, onChange, value } = this.props;
         return (
-            <select>
+            <select name={name} onChange={onChange} value={value}>
                 {optionWidgets}
             </select>
         );

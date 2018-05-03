@@ -6,9 +6,9 @@ export default class FrequencySelect extends Component {
     options() {
         var opitons = [];
 
-        opitons.push({ value: '不固定' })
-        opitons.push({ value: '每周' })
-        opitons.push({ value: '每月' })
+        opitons.push({ text: '不固定', value:'' })
+        opitons.push({ text: '每周', value:'week' })
+        opitons.push({ text: '每月', value:'month'})
 
         return opitons
     }
@@ -18,7 +18,7 @@ export default class FrequencySelect extends Component {
 
         return (
             <FormControl>
-                <Select label={"開團頻率："} options={options} />
+                <Select label={"開團頻率："} options={options} value={this.props.value} onChange={this.props.onChange}/>
             </FormControl>
         );
     }

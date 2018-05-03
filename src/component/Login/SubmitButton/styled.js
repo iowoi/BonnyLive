@@ -10,7 +10,7 @@ export const Wrapper = styled.button `
     border: 0 none
     padding-top: 10PX
     padding-bottom: 10PX
-    font-size: 20px
+    font-size: 25px
     font-weight: bolder
     color: #fff
     font-family: Microsoft JhengHei

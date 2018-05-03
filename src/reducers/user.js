@@ -1,13 +1,14 @@
-// @flow
+import {
+  REGISTER,
+  REGISTER_USER,
+  GET_USER
+} from '../constants/actionTypes';
 
-import {REGISTER,REGISTER_USER} from '../constants/actionTypes';
-//匯入Props靜態類型的定義
-import type { RegisterProp } from '../definitions/TodoTypeDefinition.js';
-  
+const initialState = {
+  user: {}
+}
 
-
-
- export default function RegisterPost(state: Array<RegisterProp> = [], action) {
+ export default function reducer(state = initialState, action) {
   switch (action.type) {
       case REGISTER:
       console.log("A",action);
@@ -19,6 +20,9 @@ import type { RegisterProp } from '../definitions/TodoTypeDefinition.js';
         return Object.assign({}, state, {
           value: state + action.payload
       });
+      case GET_USER:
+        console.log(GET_USER, action)
+        return { ...state, user: action.payload.data, fromObjID: action.payload.fromObjID}
       default:
       return state   
     }

@@ -5,9 +5,10 @@ class ActList extends Component {
     render() {
         const activities = this.props.data;
         return [
-            activities && activities.map((data, i) => {
-                return <Card key={i} data={data} />;
-            })
+            activities &&
+                activities.map((data, i) => {
+                    return <Card key={i} data={data} />;
+                })
         ];
     }
 }

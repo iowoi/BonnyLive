@@ -8,8 +8,10 @@ export const Wrapper = styled.button `
     width:100%
     background-color: #DF1C2C;
     border: 0 none
-    padding-top: 10PX
-    padding-bottom: 10PX
+    margin-top: 10px
+    margin-bottom: 10px
+    padding-top: 10px
+    padding-bottom: 13px
     font-size: 20px
     font-weight: bolder
     color: #fff

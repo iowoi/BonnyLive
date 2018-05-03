@@ -19,7 +19,7 @@ class ImageUploader extends Component {
         return (
             <Wrapper className="img-uploader">
                 <label>上傳照片：</label>
-                <input type="text" {...input} disabled value={fileName}/>
+                <input type="text" {...input} disabled value={fileName} className="fileNames"/>
                 <div className="upload-btn-wrapper">
                     <label>
                         <img src="./assets/icons/search.png" alt="" />

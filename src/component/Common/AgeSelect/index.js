@@ -16,7 +16,7 @@ export default class AgeSelect extends Component {
 
         return (
             <FormControl>
-                <Select label={"球友年齡："} options={options} />
+                <Select label={"球友年齡："} options={options} onChange={this.props.onChange} value={this.props.value}/>
             </FormControl>
         );
     }

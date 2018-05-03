@@ -40,37 +40,37 @@ class Header extends Component {
                         </a>
                     </span>
                     <Link to="/">
-                        <img src="./assets/images/logo.png" className="logo" />
+                        <img src="/assets/images/logo.png" className="logo" />
                     </Link>
                     <a className="more">更多運動 +</a>
                 </nav>
                 <SideNav menuOpen={menuOpen}>
                     <Link to="/activitySignUp" onClick={this.closeSideMenu}>
-                        <img src="./assets/icons/SignUpMenu.png" alt="" />
+                        <img src="/assets/icons/SignUpMenu.png" alt="" />
                         臨打報名
                     </Link>
                     <Link to="/newGroup" onClick={this.closeSideMenu}>
-                        <img src="./assets/icons/GroupMenu.png" alt="" />
+                        <img src="/assets/icons/GroupMenu.png" alt="" />
                         開團找我
                     </Link>
                     <Link to="/newGroup" onClick={this.closeSideMenu}>
-                        <img src="./assets/icons/KnowHowMenu.png" alt="" />
+                        <img src="/assets/icons/KnowHowMenu.png" alt="" />
                         羽球知識家
                     </Link>
                     <Link to="/activitySignUp" onClick={this.closeSideMenu}>
-                        <img src="./assets/icons/HotLiveMenu.png" alt="" />
+                        <img src="/assets/icons/HotLiveMenu.png" alt="" />
                         Live 直播
                     </Link>
                     <Link to="/activitySignUp" onClick={this.closeSideMenu}>
-                        <img src="./assets/icons/outfitMenu.png" alt="" />
+                        <img src="/assets/icons/outfitMenu.png" alt="" />
                         配備推薦
                     </Link>
-                    <Link to="/activitySignUp" onClick={this.closeSideMenu}>
-                        <img src="./assets/icons/MyBonnyMenu.png" alt="" />
+                    <Link to="/myInfo" onClick={this.closeSideMenu}>
+                        <img src="/assets/icons/MyBonnyMenu.png" alt="" />
                         My Bonny
                     </Link>
                     <Link to="/activitySignUp" onClick={this.closeSideMenu}>
-                        <img src="./assets/icons/LogoutMenu.png" alt="" />
+                        <img src="/assets/icons/LogoutMenu.png" alt="" />
                         會員登出
                     </Link>
                 </SideNav>

@@ -54,12 +54,16 @@ label {
 .main-form {
     padding: 10px 30px 10px 30px;
 }
-.main-form .form-control .img-uploader input {
+.main-form .img-uploader input {
     width: calc(100% - 85px);
 }
 
 .main-form .form-control input {
     width: 95%;
+}
+
+.main-form .form-control fileNames {
+    width: 75%;
 }
 
 .form-control {
@@ -68,4 +72,14 @@ label {
 
 .form-control input {
     width: calc(100% - 12px);
+}
+
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+@media(max-width:320px){
+    .ReactModal__Content {
+        width: 280px !important;
+    }
 }
