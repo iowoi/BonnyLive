@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import Account from './AccountInput';
 import Password from './LoginPasswordInput';
 import { SkillLevelSelect } from "../../component/Common";
@@ -8,61 +9,94 @@ import RegisterButton from './RegisterButton';
 import RememberMe from './RememberMeClick';
 import { Wrapper } from './styled';
 import { FormControl } from "../Common";
+import {
+    fetchlogin
+} from "../../actions";
 
-class NewGroup extends Component {
+
+
+class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            Name: '',
-            Email: '',
-            MobilePhone: '',
-            Password: '',
-            AuthPassword:''
-        };
+        
+        this.state = {};
 
-        // this.handleGroupNameChange = this.handleGroupNameChange.bind(this);
-        // this.handleCourtNameChange = this.handleCourtNameChange.bind(this);
-        // this.handleCourtAddressChange = this.handleCourtAddressChange.bind(this);
-    }
 
-    // handleGroupNameChange(e) {
-    //     this.setState({ groupName: e.target.value });
-    // }
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
-    // handleCourtNameChange(e) {
-    //     this.setState({ courtName: e.target.value });
-    // }
 
-    // handleCourtAddressChange(e) {
-    //     this.setState({ courtAddress: e.target.value });
-    // }
+      }
+    
+      handleInputChange(event) {
+        // 從 event object 拿到 target
+        const target = event.target;
+        
+        // 從 target.type 可以知道欄位的 type
+        // 或從 target.value 取出輸入的欄位值
+        const value = target.value;
+        // 從 target.name 得到該欄位設定的 name
+        const name = target.name;
+       
+        // 分別更新不同 name 欄位的 state
+        this.setState({
+          [name]: value
+        });
+      }
 
-    handleSubmit = (e) => {
-        alert('submit value: ' + JSON.stringify(this.state))
+      handleSubmit = (e) => {
+        // alert(this.state.account);
         e.preventDefault();
+
+         const Body = {
+            email: this.state.account,
+            password:this.state.password
+            };
+
+         this.props.onFetchLogin(Body)
+        
     }
+
+
+
 
     render() {
-        const { name, label } = this.props;
+        const { data, onClick, onUpdateSearch, levels } = this.props;
 
-        return (
+        return [
             <Wrapper>
-                <form onSubmit={this.handleSubmit} className="main-form">
+                  <form  className="main-form" >
                     <h1 class="title">我要登入</h1>
-                    <Account />
-                    <Password />
-                    <SubmitButton />
-                    <RememberMe /> 
+                    <div className="form-control">
+                     <input  name='account' type="text" value={this.state.account} onChange={this.handleInputChange} placeholder="帳號" />
+                    </div>
+                    <div className="form-control">
+                     <input  name='password' type="text" value={this.state.password} onChange={this.handleInputChange} placeholder="密碼" />
+                    </div>
+                    <SubmitButton  onClick={this.handleSubmit}/>               
+                    <RememberMe />
                     <FormControl>
                         <ThirdParty />
                     </FormControl>
                     <h1 class="Thirdtext">還不是會員嗎?</h1>
                     <RegisterButton />
-                </form>
+                    </form>
             </Wrapper>
 
-        );
+        ];
     }
 }
 
-export default NewGroup
+
+const mapStateToProps = state => ({
+    data: state,
+});
+
+const mapDispatchToProps = (dispatch) =>  ({
+    onFetchLogin: (Body) => {
+        dispatch(fetchlogin(Body))
+      }
+
+});
+
+export default  connect(mapStateToProps, mapDispatchToProps)(Login);

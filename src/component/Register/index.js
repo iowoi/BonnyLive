@@ -9,7 +9,7 @@ import ModalContent from "./ModalContent";
 import {
     Modal,
 } from "../Common";
-import { FecthRegister } from '../../actions';
+import { fetchRegister } from '../../actions';
 import Name from './NameInput';
 import Email from './EmailInput';
 import Phone from './PhoneInput';
@@ -62,7 +62,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
     onSubmit: () => {
-        dispatch(FecthRegister);
+        dispatch(fetchRegister);
         
     }
     

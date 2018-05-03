@@ -14,7 +14,7 @@ import type { RegisterProp } from '../definitions/TypeDefinition.js';
 export const register = createAction('REGISTER');
 export const getUser = createAction('GET_USER');
 
-export const FecthRegister = () => {
+export const fetchRegister = () => {
 
   const payload = {
     name: "max",
@@ -39,10 +39,10 @@ export const FecthRegister = () => {
     //ok 代表狀態碼在範圍 200-299
     if (!response.ok) throw new Error(response.statusText)
     return response.json()
-    alert('FecthRegisterQQQ')
+    alert('fetchRegister')
   })      .then(function (json) { 
     // dispatch(register(json));
-    alert('FecthRegisterQQ')
+    alert('fetchRegister')
     console.log('parsed json', json) 
   }) 
   .catch((error) => {

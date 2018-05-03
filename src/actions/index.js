@@ -1,7 +1,8 @@
 import { fetchActivity, getBannerList, updateSearch } from "./activityActions";
+import { fetchlogin } from './LoginActions';
 import { 
   registerActions,
-  FecthRegister,
+  fetchRegister,
   fetchUser
 } from "./registerActions";
 import { fetchMyInfoActivityData, fetchAllHostActivityData, fetchUpdateActivityData } from "./myInfoActions";
@@ -10,6 +11,7 @@ import { getGroupDetail } from "./groupDetailActions";
 import { fetchAllComments, fetchPostComment } from "./commentActions";
 
 export {
+  
     fetchActivity,
       getBannerList,
       updateSearch,
@@ -26,6 +28,8 @@ export {
       fetchAllComments,
       fetchPostComment,
 
-      FecthRegister,
+      fetchlogin,
+
+      fetchRegister,
   fetchUser
 };
